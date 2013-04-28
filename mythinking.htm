@@ -56,127 +56,8 @@ document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 2
 
 </script>
 
-<style type="text/css" media="all">
-body,ul,li {
-	padding:0;
-	margin:0;
-	border:0;
-}
+<link rel="stylesheet" href="iscroll.css" type="text/css" media="screen" />
 
-body {
-	font-size:12px;
-	-webkit-user-select:none;
-    -webkit-text-size-adjust:none;
-	font-family:helvetica;
-/*	padding-bottom:44px;	/*	This prevents the scroller to lock if the user swipes down outside of the screen.
-							 	NOT needed if in home screen mode and on Android. */
-}
-
-#header {
-	width:100%;
-	height:auto;
-	min-height:50px;
-	line-height:45px;
-	background-image:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #fe96c9), color-stop(0.05, #d51875), color-stop(1, #7b0a2e));
-	padding:0;
-	color:#eee;
-	font-size:20px;
-	text-align:center;
-}
-
-#header a {
-	color:#f3f3f3;
-	text-decoration:none;
-	font-weight:bold;
-	text-shadow:0 -1px 0 rgba(0,0,0,0.5);
-}
-
-#footer {
-	width:100%;
-	height:65px;
-	position:absolute; z-index:2;
-	bottom:0;
-	padding:0;
-	border-top:1px solid #444;
-	border-top:1px solid #0066CC;
-}
-
-#footer li {
-	display:block;
-	float:left;
-}
-
-#footer li {
-	width:50%;
-	text-align:center;
-}
-
-#footer a.remove {
-	border-right:1px solid #333;
-}
-
-#footer a.add {
-	border-left:1px solid #6a6a6a;
-}
-
-#footer a {
-	display:block;
-	text-decoration:none;
-	font-size:12px;
-	color:#eee;
-	line-height:24px;
-	text-shadow:0 -1px 0 #000;
-}
-
-#footer span {
-	display:block;
-	font-size:30px;
-	font-weight:bold;
-}
-
-#wrapper {
-	position:absolute; z-index:1;
-	top:65px; bottom:65px;			
-			/* it seems that recent webkit is less picky and works anyway. */
-
-	width:100%;
-	
-	overflow:hidden;
-}
-
-#scroller {
-/*	-webkit-touch-callout:none;*/
-	-webkit-tap-highlight-color:rgba(0,0,0,0);
-
-	float:left;
-	width:100%;
-	padding:0;
-
-/*	-webkit-box-shadow:0 0 8px #555;	/* Don't use box shadows, they slow down drastically CSS animations */
-}
-
-#scroller ul {
-	list-style:none;
-	padding:0;
-	margin:0;
-	width:100%;
-	text-align:left;
-}
-
-#scroller li {
-	padding:0 10px;
-	height:40px;
-	line-height:40px;
-	border-bottom:1px solid #ccc;
-	border-top:1px solid #fff;
-	background-color:#fafafa;
-	font-size:14px;
-}
-
-#scroller li > a {
-	display:block;
-}
-</style>
 
 <style>
 input[type=submit] {
@@ -717,8 +598,9 @@ xmlhttp.send();
             <textarea style="display:none" id="status" cols="50" rows="5">My Status</textarea>
             <br />
         </div>
-		<div id="header" style="background:#666666; text-align:left;">
-<a href="enter.htm"><img src="images/logo1.jpg" style="width:100%; height:auto; float:left; " /></a>
+		<div id="header">
+<a href="enter.htm">My Thinking Cap<br/>
+<span style="font-size:13px; margin-left:8%; font-weight:normal; color:#8A0000;">Prepare to Expand your mind</span></a>
 </div>
 
 <div id="wrapper">
@@ -789,16 +671,16 @@ This Lucky Dip has been viewed <span id="viewed">  </span> times.<br/>
 <td align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:14px;  font-weight:bold;color:#B6F02F;">Want different questions?</td>
 </tr>
 <tr>
-<td align="center" ><a href="mythinking.htm"><button name="btn1" id="btn1"  class="button2" >Dip<br/> Again</button></a><!--<input type="button" name="btn3" id="btn3" value="Dip Again" class="button2" style="display:none;">--></td>
+<td align="center"><a href="mythinking.htm"><button name="btn1" id="btn1"  class="button2" style="padding-top:2%;" >Dip<br/> Again</button></a></td>
 </tr>
 <tr>
 <td align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:14px;  font-weight:bold;color:#B6F02F;"><span id="popUpBtn1" style="color:#8AE4EE;">"How do I record my research? Click Here"</span> </td>
 </tr>
 <tr>
-<td align="center" ><button name="btn" class="button2" id="btn" style="font-size:12px;">  Put My<br/>Thinking Cap On </button></td>
+<td align="center" ><button name="btn" class="button2" id="btn" style="font-size:12px; padding-top:2%;">  Put My<br/>Thinking Cap On </button></td>
 </tr>
 <tr>
-<td align="center"><a href="category.htm"><button  name="btn2"  class="button2">Change<br/> Category</button></a></td>
+<td align="center"><a href="category.htm"><button  name="btn2"  class="button2" style="padding-top:2%;">Change<br/> Category</button></a></td>
 </tr>
 
 
